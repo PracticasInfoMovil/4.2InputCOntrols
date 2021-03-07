@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2018 Google Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.droidcafe.OrderActivity">
+
+    <EditText
+        android:id="@+id/phone_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:ems="10"
+        android:hint="@string/enter_name_hint"
+
+        android:inputType="phone"
+        android:text="Enter phone"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/phone_label" />
+
+
+    <EditText
+        android:id="@+id/note_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:ems="10"
+        android:hint="Enter note"
+        android:inputType="textCapSentences"
+        android:text="Enter note"
+        app:layout_constraintBottom_toBottomOf="@+id/address2"
+        app:layout_constraintStart_toEndOf="@+id/address2"
+
+
+        />
+
+    <TextView
+        android:id="@+id/order_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginLeft="136dp"
+        android:layout_marginTop="16dp"
+        android:text="You ordered a donut"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+
+        android:id="@+id/name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/name_label_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_textview"
+        />
+
+    <TextView
+
+
+        android:id="@+id/Address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="96dp"
+        android:text="@string/name_label_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_textview" />
+
+
+    <TextView
+
+
+        android:id="@+id/phone_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="Telphone"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="208dp" />
+
+    <TextView
+
+
+        android:id="@+id/address2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="Note"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="304dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+
+
+        android:id="@+id/delivery_label"
+        android:layout_width="271dp"
+        android:layout_height="28dp"
+        android:text="Choose delivery Method"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="393dp" />
+
+    <EditText
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:ems="10"
+        android:hint="@string/enter_name_hint"
+        android:inputType="textPersonName"
+        android:text="Enter your Name"
+        app:layout_constraintBaseline_toBaselineOf="@+id/name_label"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toEndOf="@+id/name_label" />
+
+
+    <Spinner
+        android:id="@+id/label_spinner"
+        android:layout_width="160dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Address"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="136dp" />
+
+    <RadioButton
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/next_day_ground_delivery"
+        app:layout_constraintStart_toStartOf="@+id/delivery_label"
+        tools:layout_editor_absoluteY="426dp"
+        tools:ignore="MissingConstraints" />
+
+    <RadioButton
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dp"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/same_day_messenger"
+        app:layout_constraintStart_toStartOf="@+id/delivery_label"
+        app:layout_constraintTop_toTopOf="@+id/delivery_label" />
+
+    <RadioButton
+        android:id="@+id/c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/pick_up"
+        app:layout_constraintStart_toStartOf="@+id/delivery_label"
+        tools:layout_editor_absoluteY="490dp"
+        tools:ignore="MissingConstraints" />
+
+
+</android.support.constraint.ConstraintLayout>
